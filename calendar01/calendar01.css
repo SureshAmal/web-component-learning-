@@ -1,0 +1,173 @@
+:root {
+	font-size: 20px;
+}
+
+body {
+	padding: 0;
+	background: #fdfcfe;
+}
+
+.MainCalendarBox {
+	position: fixed;
+	height: 20rem;
+	width: 20rem;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.CalendarHead {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.CalendarHead ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	align-items: center;
+}
+
+.CalendarHead ul li {
+	background: #f1f1f1;
+	border-radius: 15px;
+}
+
+.calendarMenu {
+	display: flex;
+	align-items: center;
+	padding: 0.5rem;
+}
+
+.CalendarHead ul li img {
+	height: 1.25rem;
+	width: 1.25rem;
+}
+
+.selectMonth {
+	display: flex;
+	align-items: center;
+	padding: 0.5rem;
+}
+
+.selectMonth .Montharrow {
+	display: flex;
+	flex-direction: column;
+}
+
+.selectMonth .Montharrow img {
+	height: 0.8rem;
+	width: 0.8rem;
+	cursor: pointer;
+	border: 1px solid #f1f1f1;
+}
+
+.selectMonth .Montharrow img:hover {
+	transform: scale(1.1);
+	border: 1px solid black;
+	border-radius: 2rem;
+}
+
+.selectMonth p {
+	font-size: 1.25rem;
+	margin: 0;
+	margin-left: 0.5rem;
+}
+
+.selectMonth > * {
+	margin-left: 0.5rem;
+}
+
+.selectMonth img:first-child {
+	margin-left: 0;
+}
+
+.Calendar {
+	width: 98%;
+	border-radius: 20px;
+	border: 1px solid black;
+}
+
+.Calendar ul {
+	width: 95%;
+	list-style: none;
+	margin: 0;
+	padding: 0.5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	justify-items: center;
+}
+
+#calendarDates > li {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	background: #f0f0f0;
+	border-radius: 2rem;
+	padding: 0.5rem;
+	width: 1rem;
+	display: flex;
+	justify-content: center;
+	border: 2px solid #f0f0f0;
+	cursor: pointer;
+}
+
+li:hover,
+li:active {
+	-webkit-user-select: none;
+	/* Safari */
+	-ms-user-select: none;
+	/* IE 10 and 11 */
+	user-select: none;
+	/* Standard syntax */
+}
+
+#calendarDates li:hover {
+	border: 2px solid black;
+}
+
+#calendarDates #today {
+	background: black;
+	color: white;
+}
+
+.Days li {
+	margin-top: 1rem;
+	color: #979797;
+	cursor: default;
+}
+
+.Days li:hover {
+	-webkit-user-select: none;
+	user-select: none;
+	border: 0px;
+	transform: none;
+}
+
+#calendarDates .notInMonth {
+	color: #a1a1a1;
+	background: white;
+	border: 2px solid white;
+	background-image: url("../icons/spiral.svg");
+}
+
+.selection_box {
+	position: fixed;
+	width: 15rem;
+	border: 1px solid black;
+	top: 20%;
+	left: 45%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-row: 1fr 1fr 1fr 1fr 1fr 1fr;
+	justify-items: center;
+	background: #ffff;
+	border-radius: 3rem;
+	margin: 0;
+	padding: 0;
+	display: none;
+}

@@ -1,0 +1,52 @@
+:root {
+	font-size: 14px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+
+#dock {
+	position: fixed;
+	bottom: 10%;
+	width: fit-content;
+	border: 1px solid black;
+	list-style: none;
+	background: #171717;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 2rem;
+	padding: 0;
+	margin: 0;
+	transition: width 0.2s;
+}
+
+#dock li {
+	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: width 0.3s;
+}
+
+.dockelement {
+	height: 1.5rem;
+	width: 1.5rem;
+	padding: 1rem;
+	border-radius: 5rem;
+	background: #262626;
+	transition: width 0.3s;
+}
+
+#dock li:first-child {
+	margin-left: 0.5rem;
+}
+
+#dock li:last-child {
+	margin-right: 0.5rem;
+}

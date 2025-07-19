@@ -1,0 +1,79 @@
+:root {
+	font-size: 14px;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-image: url("../images/bachgourndimage1.jpg");
+	background-size: cover;
+}
+
+nav {
+	height: 92%;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	margin-left: 1.5rem;
+	border: 1px solid black;
+	width: fit-content;
+	border-radius: 10px;
+	padding: 0.5rem;
+	background: rgba(255, 255, 255, 0.18);
+	border-radius: 14px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(8.1px);
+	border: 1px solid rgba(255, 255, 255, 0.21);
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav_icons {
+	display: flex;
+	flex-direction: column;
+	border-top: 1px solid black;
+	margin-top: 1.5rem;
+	height: 90%;
+}
+
+.nav_icons li {
+	padding: 0.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	border-radius: 5px;
+	transition: transform 700ms ease;
+}
+
+.nav_icons li:last-child {
+	margin-top: auto;
+}
+
+.nav_icons li:hover {
+	transform: scale(1.1);
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.29);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(11.5px);
+	-webkit-backdrop-filter: blur(11.5px);
+	border: 1px solid rgba(255, 255, 255, 0.21);
+}
+
+.nav_icons li img {
+	width: 2rem;
+	height: 2rem;
+}
+
+.logo {
+	margin: 0.5rem;
+	margin-top: 0.5rem;
+	width: 3rem;
+	height: 3rem;
+}

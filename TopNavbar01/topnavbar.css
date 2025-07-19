@@ -1,0 +1,86 @@
+#root {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(158, 158, 158, 0.5) 1px,
+      transparent 1px), linear-gradient(90deg, rgba(158, 158, 158, 0.5) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+#TopNavLink {
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  width: 30%;
+  min-width: fit-content;
+  transform: translateX(-50%);
+  list-style: none;
+  margin: 0;
+  border: 8px solid white;
+  background: #171717;
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+#TopNavLink li {
+  color: white;
+  cursor: pointer;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#TopNavLink li:first-child {
+  margin-left: 16px;
+}
+
+#TopNavLink li:last-child {
+  margin-right: 16px;
+}
+
+/* #TopNavLink li:last-child { */
+/*   margin-right: 8px; */
+/* } */
+
+#navBoxHover {
+  position: absolute;
+  top: 58px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 12px;
+  background: rgba(23, 23, 23, 0.7);
+  padding: 1rem;
+  display: none;
+  justify-content: center;
+  border-radius: 16px;
+  transition: width 1s ease, height 1s ease;
+  z-index: 100;
+  overflow: hidden;
+}
+
+/* nav:hover #navBoxHover { */
+/*   display: flex; */
+/* } */
+#navBoxHover {
+  transition: width 0.5s ease, height 0.5s ease;
+  overflow: hidden;
+}
+
+#navBoxHover.active {
+  width: auto;
+  height: auto;
+}
+
+#navBoxHover div {
+  background: red;
+  transition: left 1s ease;
+}

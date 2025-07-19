@@ -1,0 +1,232 @@
+:root {
+	font-size: 14px;
+	font-family: sans-serif;
+	/* Light theme variables */
+	--background-light: white;
+	--background-alt-light: lightblue;
+	--text-light: black;
+	--button-bg-light: rgba(255, 255, 255, 0.3);
+	--button-hover-bg-light: rgba(245, 255, 225, 0.6);
+
+	/* Dark theme variables */
+	--background-dark: black;
+	--background-alt-dark: darkblue;
+	--text-dark: white;
+	--button-bg-dark: rgba(0, 0, 0, 0.3);
+	--button-hover-bg-dark: rgba(0, 100, 255, 0.6);
+
+	/* Active theme variables */
+	--background: var(--background-light);
+	--background-alt: var(--background-alt-light);
+	--text-color: var(--text-light);
+	--button-bg: var(--button-bg-light);
+	--button-hover-bg: var(--button-hover-bg-light);
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	overflow: hidden;
+	display: grid;
+	place-items: center;
+	background: #024a8f;
+	/* background-image: linear-gradient(var(--background-alt) 1px, transparent 1px), */
+	/* 	linear-gradient(90deg, var(--background-alt) 1px, transparent 1px); */
+	/* background-size: 16px 16px; */
+}
+
+#Mobile {
+	aspect-ratio: calc(1 / 1.85);
+	height: 55rem;
+	background: var(--background);
+	border-radius: 2.5rem;
+}
+
+.header {
+	height: 10%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.select_theme {
+	height: 2rem;
+	width: 7rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #afdafc;
+	border-radius: 2rem;
+	padding: 0.2rem;
+}
+
+#thememode {
+	border-radius: 2rem;
+	height: 3rem;
+	width: 4rem;
+	margin-left: 2rem;
+	background: var(--background-alt);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#theme img {
+	fill: var(--text-color);
+}
+
+.header img {
+	height: 1.5rem;
+	width: 1.5rem;
+	cursor: pointer;
+}
+
+#answers_display {
+	height: 30%;
+	width: 83%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	padding-right: 3rem;
+	padding-left: 3rem;
+}
+
+#Calculator_buttons {
+	height: 57%;
+	width: 93.2%;
+	background: rgba(177, 213, 249, 0.4);
+	border-radius: 1rem 1rem 2.5rem 2.5rem;
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	grid-template-rows: 4rem;
+	grid-gap: 16px;
+	color: var(--text-color);
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.09);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(14.6px);
+	-webkit-backdrop-filter: blur(14.6px);
+	z-index: 3;
+}
+
+#operators,
+#numbers button,
+#methods {
+	background-color: var(--button-bg);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(12.8px);
+	-webkit-backdrop-filter: blur(12.8px);
+}
+
+#methods {
+	display: grid;
+	grid-template-columns: 5rem 1fr 4.5rem;
+	border-radius: 2rem;
+	gap: 0;
+	margin-left: 1.2rem;
+	margin-right: 1.2rem;
+}
+
+#operators {
+	grid-row: span 2;
+	display: grid;
+	grid-template-rows: 4rem 8.8rem 3.9rem 9.7rem 3.5rem;
+	place-items: center;
+	border-radius: 2rem;
+	width: fit-content;
+	height: 96%;
+}
+
+#numbers {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	place-items: center;
+}
+
+#remove {
+	fill: var(--text-color);
+}
+
+#operators button,
+#methods button {
+	background: none;
+	border: none;
+	font-size: 2.2rem;
+	font-weight: 550;
+	cursor: pointer;
+}
+
+#operators>#buttonEqual {
+	height: 4.5rem;
+	width: 4.5rem;
+	background: var(--button-hover-bg);
+	border-radius: 2rem;
+}
+
+#numbers button {
+	height: 4.5rem;
+	width: 4.5rem;
+	border-radius: 2rem;
+	border: none;
+	font-size: 2rem;
+	font-weight: 550;
+	cursor: pointer;
+}
+
+#numbers button:hover,
+#operators button:hover,
+#methods button:hover {
+	transform: scale(1.4);
+}
+
+.answer {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 1.7rem;
+	line-height: 0.3;
+}
+
+#answers_display #question {
+	color: #bbbbbb;
+	width: 100%;
+	text-align: end;
+	font-size: 1.5rem;
+	letter-spacing: 3px;
+	margin: 0;
+}
+
+button {
+	color: var(--text-color);
+}
+
+.bottom_bg {
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle at top right,
+			var(--background-alt),
+			var(--background));
+	filter: blur(4px);
+	z-index: 0;
+	border-radius: 1rem 1rem 2.5rem 2.5rem;
+}
+
+#answer_label {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	width: 300px;
+	height: 3rem;
+	margin: 0;
+	padding: 0;
+	padding-top: 2rem;
+	text-align: end;
+}
